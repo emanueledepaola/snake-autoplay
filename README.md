@@ -24,10 +24,9 @@ Once logged-in on [GitHub](https://github.com/), navigate to the repo [andreagal
 
 ![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/open_codespace.png)
 
-This will open a browser-based IDE (essentially vscode) in a new tab.
+This will open a browser-based IDE (essentially vscode) in a new tab. The first time (only) you instantiate this particular codespace, from the integrated CLI, launch the setup script after having sourced the hidden `.env` file:
 
-The first time (only) you instantiate this particular codespace, from the integrated CLI, launch the setup script:
-
+    source .env
     setup
 
 this installs all the dependecies we need, basically `pygame` and a custom version of `pygbag` modules.
