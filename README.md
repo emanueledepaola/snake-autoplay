@@ -18,7 +18,7 @@ To overcome this issue, fortunately thanks to the `pygbag` module, we can access
 
 ## GitHub Codespace setup 
 
-This is the quickest way to spin up a lightweight dev environment (in the cloud): without the need of installing anything at all on your personal computer, althougth sacrifying to some extent the available resources and control, over the environment itself.
+This is the quickest way to spin up a lightweight dev environment (in the cloud) without the need of installing anything at all on your personal computer, althougth sacrifying to some extent the available resources and control, over the environment itself.
 
 Once logged-in on [GitHub](https://github.com/), navigate to the repo [andreagalle/snake-autoplay](https://github.com/andreagalle/snake-autoplay) and click on the `Use this template > Open in a codespace` button 
 
@@ -26,34 +26,34 @@ Once logged-in on [GitHub](https://github.com/), navigate to the repo [andreagal
 
 This will open a browser-based IDE (essentially vscode) in a new tab.
 
-The first time (only) you instantiate this particular codespace, from the integrated CLI, launch the setup script here below:
+The first time (only) you instantiate this particular codespace, from the integrated CLI, launch the setup script:
 
     setup
 
-this start installing all the dependecies we need, basically `pygame` module the most important one and a custom version of the `pygbag` module.
+this installs all the dependecies we need, basically `pygame` and a custom version of `pygbag` modules.
 
 Then, navigate to the snake version you want to run, for instance the standard one and launch the deploy script:
 
     cd std/
     deploy
 
-this basically use `pygbag` module, passing the GitHub `${CODESPACE_NAME}` env variable, to deploy the game on that randomly choosed domain name under the default port `8000`. 
+this basically use `pygbag` module passing the GitHub `${CODESPACE_NAME}` environment variable, to deploy the game on that domain name (randomly choosed by GitHub itself), under the default port `8000`.
 
 ![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/url_codespace.png)
 
-This domain name must coincide with the string highlighted in the above URL thus, launching the deploy script is the same as running the following command
+This domain name must coincide with the string highlighted in the above URL thus, launching the deploy script would be the same as running the following command, for instance:
 
-    pygbag --gh_codespace ${CODESPACE_NAME} main.py
+    pygbag --gh_codespace "animated space zebra" main.py
 
-passing for instance the `ff` domain name, randomly assigned by GitHub to the codespace itself. That's important to remember, just in case the `${CODESPACE_NAME}` env variable won't work anymore in the future!
+passing the `"animated space zebra"` codespace name itself, randomly assigned by GitHub itself. That's important to remember, just in case the `${CODESPACE_NAME}` environment variable won't work anymore in the future!
 
-Now click on the `Ready to start !` button and that's it!
+Now click on the `Ready to start!` button and that's it!
 
 **N.B.** always remember to turn off the codespace we just instantiated, not to waste useful resources (i.e. core hours used). Thus click on the GitHub `Codespace` tab at the Top Navigation Bar of the repo
 
 ![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/bar_codespace.png)
 
-then, search for the running codespace randomly generated name and stop it.
+then, search for the (randomly generated) name of the running codespace and stop it.
 
 ![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/stop_codespace.png)
 
@@ -71,15 +71,15 @@ open any CLI, and run the following command
 
 this will run a Docker container, in detached mode, with the promised dev environment accessible from the browser.
 
-After the [alnoda/python-workspace](https://hub.docker.com/r/alnoda/python-workspace) Docker image has been pulled (just the first time) and the Docker container is up and running, go to [localhost:8020](http://localhost:8020/)
+After the [alnoda/python-workspace](https://hub.docker.com/r/alnoda/python-workspace) Docker image has been pulled (the very first time) and the Docker container is up and running, go to [localhost:8020](http://localhost:8020/)
 
 ![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/docker_alnoda.png)
 
-From there open the `Terminal` webapp (CLI) and first of all, clone the repo [andreagalle/snake-autoplay](https://github.com/andreagalle/snake-autoplay)
+From there open the `Terminal` webapp (CLI) and there, clone the repo [andreagalle/snake-autoplay](https://github.com/andreagalle/snake-autoplay)
 
     git clone https://github.com/andreagalle/snake-autoplay.git
 
-Now we can start installing all the necessary dependecies, starting from `pygame` module, the most important one!
+Let's start installing all the necessary dependecies, starting from `pygame` module, the most important one!
 
     pip install pygame
 
@@ -90,7 +90,7 @@ Then, let's install a custom version of the `pygbag` module:
     git checkout docker-workspace
     pip install -e $PWD
 
-At this point, go back to the root repo and navigate to the snake version you want to run, for instance the standard one:
+Now go back to the root repo and navigate to the snake version you want to run, for instance the standard one:
 
     cd ../snake-autoplay/
     cd std/
@@ -99,4 +99,4 @@ From there, deploy it with the following command
 
     pygbag --docker_workspace --port 8030 main.py
 
-go to [localhost:8030](http://localhost:8030/) click on the `Ready to start !` button and that's it!
+go to [localhost:8030](http://localhost:8030/) click on the `Ready to start!` button and that's it!
