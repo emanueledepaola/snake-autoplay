@@ -24,12 +24,12 @@ Once logged-in on [GitHub](https://github.com/), navigate to the repo [andreagal
 
 ![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/open_codespace.png)
 
-This will open a browser-based IDE (essentially vscode) in a new tab. The first time (only) you instantiate this particular codespace, from the integrated CLI, launch the setup script after having sourced the hidden `.env` file:
+This will open a browser-based IDE (essentially vscode) in a new tab. As you instantiate this particular codespace, from the integrated CLI launch the setup script, after having sourced the hidden `.env` file:
 
     source .env
     setup
 
-this installs all the dependecies we need, basically `pygame` and a custom version of `pygbag` modules.
+to install (first time only) all the dependecies we need, basically `pygame` and a custom version of `pygbag` modules.
 
 Then, navigate to the snake version you want to run, for instance the standard one and launch the deploy script:
 
@@ -42,9 +42,12 @@ this basically use `pygbag` module passing the GitHub `${CODESPACE_NAME}` enviro
 
 This domain name must coincide with the string highlighted in the above URL thus, launching the deploy script would be the same as running the following command, for instance:
 
-    pygbag --gh_codespace "animated space zebra" main.py
+    pygbag --gh_codespace "animated-space-zebra" main.py
 
-passing the `"animated space zebra"` codespace name itself, randomly assigned by GitHub itself. That's important to remember, just in case the `${CODESPACE_NAME}` environment variable won't work anymore in the future!
+passing the `"animated-space-zebra"` codespace name itself, randomly assigned by GitHub itself. That's important to remember, just in case the `${CODESPACE_NAME}` environment variable won't work anymore in the future!
+
+![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/animated_space_zebra.png)
+("An animated space zebra in the style of vector artwork." asked to [DALL·E 2 - OpenAI](https://labs.openai.com/) the 16th March 2023.)
 
 Now click on the `Ready to start!` button and that's it!
 
