@@ -47,7 +47,7 @@ This domain name must coincide with the string highlighted in the above URL thus
 passing the `"animated-space-zebra"` codespace name itself, randomly assigned by GitHub itself. That's important to remember, just in case the `${CODESPACE_NAME}` environment variable won't work anymore in the future!
 
 ![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/animated_space_zebra.png)
-("An animated space zebra in the style of vector artwork." asked to [DALL·E 2 - OpenAI](https://labs.openai.com/) the 16th March 2023.)
+( *"An animated space zebra in the style of vector artwork."* asked to [DALL·E 2 - OpenAI](https://labs.openai.com/ ) the 16th March 2023.)
 
 Now click on the `Ready to start!` button and that's it!
 
