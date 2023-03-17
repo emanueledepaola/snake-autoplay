@@ -16,7 +16,7 @@ To overcome this issue, thanks to the `pygbag` module, fortunately we can access
 - [Project Page](https://pygame-web.github.io/)
 - [GitHub Repo](https://github.com/pygame-web/pygbag)
 
-## GitHub Codespace setup 
+## GitHub Codespace setup ( <a href="quickstart.html">Slideshow</a> )
 
 This is the quickest way to spin up a lightweight dev environment (in the cloud), without having to install anything on your personal computer, althougth sacrifying to some extent full access to resources and the overall control, over this environment.
 
