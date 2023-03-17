@@ -13,6 +13,8 @@ black 	= pygame.Color(  0,   0,   0)
 white 	= pygame.Color(255, 255, 255)
 red 	= pygame.Color(255,   0,   0)
 green 	= pygame.Color(  0, 255,   0)
+b_green = pygame.Color(  0, 100, 0)
+b_red   = pygame.Color(100,   0, 0)
 
 # Window size
 window_x = 720 ; window_y = 480
@@ -21,10 +23,6 @@ window_x = 720 ; window_y = 480
 # object to help track time
 fps = pygame.time.Clock()
 
-# # Main menu theme (pygame_menu)
-# theme = pygame_menu.themes.THEME_DARK.copy()
-# theme.title_font = pygame_menu.font.FONT_8BIT
-# theme.widget_font = pygame_menu.font.FONT_8BIT
 
 def init():
     # Initialising pygame
@@ -58,6 +56,49 @@ def random_pos():
 
 def fill(game_window):
     game_window.fill(black)
+
+def menu(screen):
+
+	# Set up font
+	font = pygame.font.SysFont(None, 50)
+
+	# Set up buttons
+	button_x = 200 ; button_y = 50
+	auto_button = pygame.Rect((window_x - button_x)/2, (window_y - button_y - 3*button_y)/2, button_x, button_y)
+	play_button = pygame.Rect((window_x - button_x)/2, (window_y - button_y             )/2, button_x, button_y)
+	quit_button = pygame.Rect((window_x - button_x)/2, (window_y - button_y + 3*button_y)/2, button_x, button_y)
+
+	# Draw buttons
+	pygame.draw.rect(screen, green, auto_button)
+	pygame.draw.rect(screen, green, play_button)
+	pygame.draw.rect(screen, red,   quit_button)
+
+	# Draw button labels
+	auto_label = font.render("Auto", True, black)
+	play_label = font.render("Play", True, black)
+	quit_label = font.render("Quit", True, black)
+	screen.blit(auto_label, (auto_button.x + 60, auto_button.y + 10))
+	screen.blit(play_label, (play_button.x + 60, play_button.y + 10))
+	screen.blit(quit_label, (quit_button.x + 60, quit_button.y + 10))
+
+	# Check if buttons are clicked
+	mouse = pygame.mouse.get_pos()
+	if auto_button.collidepoint(mouse):
+		pygame.draw.rect(screen, b_green, auto_button)
+		screen.blit(auto_label, (auto_button.x + 60, auto_button.y + 10))
+		if pygame.mouse.get_pressed()[0]:
+			return "auto"
+	if play_button.collidepoint(mouse):
+		pygame.draw.rect(screen, b_green, play_button)
+		screen.blit(play_label, (play_button.x + 60, play_button.y + 10))
+		if pygame.mouse.get_pressed()[0]:
+			return "std"
+	if quit_button.collidepoint(mouse):
+		pygame.draw.rect(screen, b_red, quit_button)
+		screen.blit(quit_label, (quit_button.x + 60, quit_button.y + 10))
+		if pygame.mouse.get_pressed()[0]:
+			pygame.quit()
+			quit()
 
 # displaying Score function
 def show_score(choice, color, font, size, game_window):
@@ -106,4 +147,5 @@ def game_over(game_window):
 	pygame.quit()
 	
 	# quit the program
+	pygame.quit()
 	quit()
