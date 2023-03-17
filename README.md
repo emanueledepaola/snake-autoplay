@@ -31,9 +31,8 @@ This will open a browser-based IDE (essentially vscode) in a new tab. As you ins
 
 to install (first time only) all the dependecies we need, basically `pygame` and a custom version of `pygbag` modules.
 
-Then, navigate to the snake version you want to run, for instance the standard one and launch the deploy script:
+Then, launch the deploy script:
 
-    cd std/
     deploy
 
 this basically use `pygbag` module passing the GitHub `${CODESPACE_NAME}` environment variable, to deploy the game on that domain name (randomly choosed by GitHub itself), under the default port `8000`.
@@ -49,7 +48,7 @@ passing the `"andreagalle-animated-space-zebra"` codespace name itself, randomly
 ![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/animated_space_zebra.png)
 ( *"An animated space zebra in the style of vector artwork."* prompted to [DALL·E 2 - OpenAI](https://labs.openai.com/ ) on the 16th March 2023.)
 
-Now click on the `Ready to start!` button and that's it!
+Now click on the `Ready to start!` button, navigate the menu to choose the game mode and that's it!
 
 **N.B.** always remember to turn off the codespace we just instantiated, not to waste useful resources (i.e. core hours used). Thus click on the GitHub `Codespace` tab at the Top Navigation Bar of the repo
 
@@ -94,13 +93,12 @@ Then, let's install a custom version of the `pygbag` module:
     git checkout docker-workspace
     pip install -e $PWD
 
-Now go back to the root repo and navigate to the snake version you want to run, for instance the standard one:
+Now go back to the root repo
 
     cd ../snake-autoplay/
-    cd std/
 
-From there, deploy it with the following command
+from there deploy the game, as a webapp, with the following command:
 
     pygbag --docker_workspace --port 8030 main.py
 
-go to [localhost:8030](http://localhost:8030/) click on the `Ready to start!` button and that's it!
+go to [localhost:8030](http://localhost:8030/) click on the `Ready to start!` button, navigate the menu to choose the game mode and that's it!
