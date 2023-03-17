@@ -7,9 +7,9 @@ Follow these simple steps to fire up a Linux host &ndash; with full control over
 - [GitHub Codespace setup](#github-codespace-setup)
 - [Docker setup](#docker-setup)
 
-If interested in understanding what's happening under the hood: in a few words, a containerized dev environment is instantiated in both cases (here below &ndash; locally, with Docker or in the cloud, on GitHub). From there, all the fundamental tools we need to develop (i.e. an IDE and the CLI), are accessible from the browser itself. 
+If interested in understanding what's happening under the hood: in a few words, a containerized dev environment is instantiated in both cases (here below &ndash; locally, with Docker or in the cloud, with GitHub). There, every tool we need to develop (an IDE and the CLI) is accessible from the browser itself. 
 
-What was missing was in principle just a GUI to to render `pygame` graphics.
+What we miss is just a GUI to to render `pygame` graphics.
 
 To overcome this issue, fortunately thanks to the `pygbag` module, we can access the game as a webapp on a browser-based GUI. More info on this package at the following links:
 - [Python Package](https://pypi.org/project/pygbag/)
@@ -18,7 +18,7 @@ To overcome this issue, fortunately thanks to the `pygbag` module, we can access
 
 ## GitHub Codespace setup 
 
-This is the quickest way to spin up a lightweight dev environment (in the cloud) without the need of installing anything at all on your personal computer, althougth sacrifying to some extent the available resources and control, over the environment itself.
+This is the quickest way to spin up a lightweight dev environment (in the cloud), without having to install anything on your personal computer, althougth sacrifying to some extent full access to resources and the overall control, over this environment.
 
 Once logged-in on [GitHub](https://github.com/), navigate to the repo [andreagalle/snake-autoplay](https://github.com/andreagalle/snake-autoplay) and click on the `Use this template > Open in a codespace` button 
 
