@@ -9,9 +9,9 @@ Follow these simple steps to fire up a Linux host &ndash; with full control over
 
 If interested in understanding what's happening under the hood: in a few words, a containerized dev environment is instantiated in both cases (here below &ndash; locally, with Docker or in the cloud, with GitHub). There, every tool we need to develop (an IDE and the CLI) is accessible from the browser itself. 
 
-What we miss is just a GUI to to render `pygame` graphics.
+What we miss is just a GUI to render `pygame` graphics.
 
-To overcome this issue, fortunately thanks to the `pygbag` module, we can access the game as a webapp on a browser-based GUI. More info on this package at the following links:
+To overcome this issue, thanks to the `pygbag` module, fortunately we can access the game as a webapp on a browser-based GUI. More info on this package at the following links:
 - [Python Package](https://pypi.org/project/pygbag/)
 - [Project Page](https://pygame-web.github.io/)
 - [GitHub Repo](https://github.com/pygame-web/pygbag)
@@ -42,9 +42,9 @@ this basically use `pygbag` module passing the GitHub `${CODESPACE_NAME}` enviro
 
 This domain name must coincide with the string highlighted in the above URL thus, launching the deploy script would be the same as running the following command, for instance:
 
-    pygbag --gh_codespace "animated-space-zebra" main.py
+    pygbag --gh_codespace "andreagalle-animated-space-zebra" main.py
 
-passing the `"animated-space-zebra"` codespace name itself, randomly assigned by GitHub itself. That's important to remember, just in case the `${CODESPACE_NAME}` environment variable won't work anymore in the future!
+passing the `"andreagalle-animated-space-zebra"` codespace name itself, randomly assigned by GitHub itself. That's important to remember, just in case the `${CODESPACE_NAME}` environment variable won't work anymore in the future!
 
 ![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/animated_space_zebra.png)
 ( *"An animated space zebra in the style of vector artwork."* prompted to [DALL·E 2 - OpenAI](https://labs.openai.com/ ) on the 16th March 2023.)
