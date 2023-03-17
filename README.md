@@ -16,7 +16,7 @@ To overcome this issue, thanks to the `pygbag` module, fortunately we can access
 - [Project Page](https://pygame-web.github.io/)
 - [GitHub Repo](https://github.com/pygame-web/pygbag)
 
-## GitHub Codespace setup ( <a href="quickstart.html">Slideshow</a> )
+## GitHub Codespace setup
 
 This is the quickest way to spin up a lightweight dev environment (in the cloud), without having to install anything on your personal computer, althougth sacrifying to some extent full access to resources and the overall control, over this environment.
 
@@ -58,6 +58,8 @@ Now click on the `Ready to start!` button and that's it!
 then, search for the (randomly generated) name of the running codespace and stop it.
 
 ![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/stop_codespace.png)
+
+Read this guide as a <a href="quickstart.html">Slideshow</a>.
 
 ## Docker setup
 
