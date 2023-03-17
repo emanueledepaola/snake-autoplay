@@ -2,6 +2,8 @@ import pygame
 import random
 import time
 
+# import autopilot
+
 # initial score
 score = 0
 
