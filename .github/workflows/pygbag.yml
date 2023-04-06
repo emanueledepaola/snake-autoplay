@@ -16,10 +16,10 @@ jobs:
             python -m pygbag --build $GITHUB_WORKSPACE/src/main.py
     - name: Move quickstart.html to build/web
       run: |
-        mkdir -p $GITHUB_WORKSPACE/build/web
-        mv $GITHUB_WORKSPACE/doc/* $GITHUB_WORKSPACE/build/web/
+        mkdir -p $GITHUB_WORKSPACE/src/build/web
+        mv $GITHUB_WORKSPACE/doc/* $GITHUB_WORKSPACE/src/build/web/
     - name : "Upload to GitHub pages branch gh-pages"
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
         branch: gh-pages
-        folder: build/web
+        folder: src/build/web
