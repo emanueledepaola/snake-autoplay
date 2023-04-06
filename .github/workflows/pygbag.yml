@@ -13,13 +13,14 @@ jobs:
     - name: Checkout
       run: |
             python -m pip install pygbag
-            python -m pygbag --build $GITHUB_WORKSPACE/src/main.py
+            mv $GITHUB_WORKSPACE/src/*.py $GITHUB_WORKSPACE/
+            python -m pygbag --build $GITHUB_WORKSPACE/main.py
     - name: Move quickstart.html to build/web
       run: |
-        mkdir -p $GITHUB_WORKSPACE/src/build/web
-        mv $GITHUB_WORKSPACE/doc/* $GITHUB_WORKSPACE/src/build/web/
+        mkdir -p $GITHUB_WORKSPACE/build/web
+        mv $GITHUB_WORKSPACE/doc/* $GITHUB_WORKSPACE/build/web/
     - name : "Upload to GitHub pages branch gh-pages"
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
         branch: gh-pages
-        folder: src/build/web
+        folder: build/web
