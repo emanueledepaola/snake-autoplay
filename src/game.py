@@ -2,7 +2,8 @@ import pygame
 import random
 import time
 
-# import autopilot
+# change random seed to get better chance! 
+ random.seed(69)
 
 # initial score
 score = 0
