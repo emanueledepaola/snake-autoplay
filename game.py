@@ -3,7 +3,7 @@ import random
 import time
 
 # change random seed to get better chance! 
- random.seed(69)
+random.seed(69)
 
 # initial score
 score = 0
