@@ -17,7 +17,7 @@ jobs:
     - name: Move quickstart.html to build/web
       run: |
         mkdir -p $GITHUB_WORKSPACE/build/web
-        mv $GITHUB_WORKSPACE/quickstart.html $GITHUB_WORKSPACE/build/web/
+        mv $GITHUB_WORKSPACE/doc/* $GITHUB_WORKSPACE/build/web/
     - name : "Upload to GitHub pages branch gh-pages"
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
