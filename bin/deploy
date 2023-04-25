@@ -1,4 +1,3 @@
 #!/bin/bash
 
-unset GAME_MODE ; export GAME_MODE="$1"
 pygbag --gh_codespace "${CODESPACE_NAME}" main.py

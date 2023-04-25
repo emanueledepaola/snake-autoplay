@@ -22,7 +22,7 @@ This is the quickest way to spin up a lightweight dev environment (in the cloud)
 
 Once logged-in on [GitHub](https://github.com/), navigate to the repo [andreagalle/snake-autoplay](https://github.com/andreagalle/snake-autoplay) and click on the `Use this template > Open in a codespace` button 
 
-![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/open_codespace.png)
+![Open Codespace](/doc/img/open_codespace.png)
 
 This will open a browser-based IDE (essentially vscode) in a new tab. As you instantiate this particular codespace, from the integrated CLI launch the setup script, after having sourced the hidden `.env` file:
 
@@ -37,7 +37,7 @@ Then, launch the deploy script:
 
 this basically use `pygbag` module passing the GitHub `${CODESPACE_NAME}` environment variable, to deploy the game on that domain name (randomly choosed by GitHub itself), under the default port `8000`.
 
-![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/url_codespace.png)
+![Open Codespace](/doc/img/url_codespace.png)
 
 This domain name must coincide with the string highlighted in the above URL thus, launching the deploy script would be the same as running the following command, for instance:
 
@@ -45,18 +45,18 @@ This domain name must coincide with the string highlighted in the above URL thus
 
 passing the `"andreagalle-animated-space-zebra"` codespace name itself, randomly assigned by GitHub itself. That's important to remember, just in case the `${CODESPACE_NAME}` environment variable won't work anymore in the future!
 
-![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/animated_space_zebra.png)
+![Open Codespace](/doc/img/animated_space_zebra.png)
 ( *"An animated space zebra in the style of vector artwork."* prompted to [DALL·E 2 - OpenAI](https://labs.openai.com/ ) on the 16th March 2023.)
 
 Now click on the `Ready to start!` button, navigate the menu to choose the game mode and that's it!
 
 **N.B.** always remember to turn off the codespace we just instantiated, not to waste useful resources (i.e. core hours used). Thus click on the GitHub `Codespace` tab at the Top Navigation Bar of the repo
 
-![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/bar_codespace.png)
+![Open Codespace](/doc/img/bar_codespace.png)
 
 then, search for the (randomly generated) name of the running codespace and stop it.
 
-![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/stop_codespace.png)
+![Open Codespace](/doc/img/stop_codespace.png)
 
 Read this guide as a <a href="quickstart.html">Slideshow</a>.
 
@@ -66,7 +66,7 @@ This is the most effective solution to get a fully fledged dev environment (loca
 
 Once installed [Docker](https://www.docker.com/) on you personal computer (check out the right installation package given the OS)
 
-![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/docker_download.png)
+![Open Codespace](/doc/img/docker_download.png)
 
 open any CLI, and run the following command
 
@@ -76,7 +76,7 @@ this will run a Docker container, in detached mode, with the promised dev enviro
 
 After the [alnoda/python-workspace](https://hub.docker.com/r/alnoda/python-workspace) Docker image has been pulled (the very first time) and the Docker container is up and running, go to [localhost:8020](http://localhost:8020/)
 
-![Open Codespace](https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/docker_alnoda.png)
+![Open Codespace](/doc/img/docker_alnoda.png)
 
 From there open the `Terminal` webapp (CLI) and there, clone the repo [andreagalle/snake-autoplay](https://github.com/andreagalle/snake-autoplay)
 
