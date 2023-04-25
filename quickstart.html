@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Running a Python project on GitHub Codespaces</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/theme/white.min.css" id="theme">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.js"></script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Running a Python project on GitHub Codespaces</h1>
+        <p>Follow these steps to run the snake-autoplay project on GitHub Codespaces.</p>
+      </section>
+
+      <section>
+        <h2>Step 1: Open Codespace</h2>
+        <ol>
+          <li>Once logged-in on <a href="https://github.com/" target="_blank">GitHub</a>, navigate to the repo <a href="https://github.com/andreagalle/snake-autoplay" target="_blank">andreagalle/snake-autoplay</a> and click on the <code>Use this template &gt; Open in a codespace</code> button.</li>
+          <li>This will open a browser-based IDE (essentially vscode) in a new tab.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Step 2: Launch Setup Script</h2>
+        <ol>
+          <li>From the integrated CLI, launch the setup script after having sourced the hidden <code>.env</code> file:
+            <pre>
+              <code>source .env</code>
+              <code>setup</code>
+            </pre>
+          </li>
+          <li>This will install (first time only) all the dependencies we need, basically <code>pygame</code> and a custom version of <code>pygbag</code> modules.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Step 3: Launch Deploy Script</h2>
+        <ol>
+          <li>Navigate to the snake version you want to run, for instance the standard one, and launch the deploy script:
+            <pre>
+              <code>cd std/</code>
+              <code>deploy</code>
+            </pre>
+          </li>
+          <li>This basically uses the <code>pygbag</code> module passing the GitHub <code>${CODESPACE_NAME}</code> environment variable to deploy the game on that domain name (randomly chosen by GitHub itself), under the default port <code>8000</code>.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Step 4: Ready to Start!</h2>
+        <p>Click on the <code>Ready to start!</code> button and that's it!</p>
+        <img src="https://raw.githubusercontent.com/andreagalle/snake-autoplay/focus-group-demo/img/url_codespace.png" alt="Codespace URL">
+      </section>
+    </div>
+  </div>
+<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true
+  });
+</script>
+</body>
+
+</html>
