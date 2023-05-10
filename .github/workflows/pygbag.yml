@@ -9,16 +9,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Checkout
+    - name: Checkout 
+      uses: actions/checkout@v2
+      # with:
+      #   path: main
+    - name: Checkout reveal.js
+      uses: actions/checkout@v2
+      with:
+        repository: hakimel/reveal.js
+        path: reveal.js
+    - name: Build with pygbag
       run: |
             python -m pip install pygbag
             mv $GITHUB_WORKSPACE/src/*.py $GITHUB_WORKSPACE/
             python -m pygbag --build $GITHUB_WORKSPACE/main.py
-    - name: Move quickstart.html to build/web
+    - name: Move quickstart.html & reveal.js into build/web
       run: |
-        mkdir -p $GITHUB_WORKSPACE/build/web
-        mv $GITHUB_WORKSPACE/doc/* $GITHUB_WORKSPACE/build/web/
+            mkdir -p $GITHUB_WORKSPACE/build/web
+            rm $GITHUB_WORKSPACE/reveal.js/index.html
+            mv $GITHUB_WORKSPACE/reveal.js/* $GITHUB_WORKSPACE/build/web/
+            mv $GITHUB_WORKSPACE/doc/* $GITHUB_WORKSPACE/build/web/
     - name : "Upload to GitHub pages branch gh-pages"
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
