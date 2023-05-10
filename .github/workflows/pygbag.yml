@@ -15,9 +15,12 @@ jobs:
             python -m pip install pygbag
             mv $GITHUB_WORKSPACE/src/*.py $GITHUB_WORKSPACE/
             python -m pygbag --build $GITHUB_WORKSPACE/main.py
-    - name: Move quickstart.html to build/web
+    - name: Move quickstart.html & reveal.js to build/web
       run: |
         mkdir -p $GITHUB_WORKSPACE/build/web
+        git clone https://github.com/hakimel/reveal.js.git
+        rm $GITHUB_WORKSPACE/reveal.js/index.html
+        mv $GITHUB_WORKSPACE/reveal.js/* $GITHUB_WORKSPACE/build/web/
         mv $GITHUB_WORKSPACE/doc/* $GITHUB_WORKSPACE/build/web/
     - name : "Upload to GitHub pages branch gh-pages"
       uses: JamesIves/github-pages-deploy-action@4.1.7

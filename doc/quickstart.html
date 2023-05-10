@@ -1,71 +1,142 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>Running a Python project on GitHub Codespaces</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reset.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/theme/white.min.css" id="theme">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.js"></script>
-</head>
+	<head>
+		<meta charset="utf-8">
 
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section>
-        <h1>Running a Python project on GitHub Codespaces</h1>
-        <p>Follow these steps to run the snake-autoplay project on GitHub Codespaces.</p>
-      </section>
+		<title>Snake your way into GitHub Codespaces</title>
 
-      <section>
-        <h2>Step 1: Open Codespace</h2>
-        <ol>
-          <li>Once logged-in on <a href="https://github.com/" target="_blank">GitHub</a>, navigate to the repo <a href="https://github.com/andreagalle/snake-autoplay" target="_blank">andreagalle/snake-autoplay</a> and click on the <code>Use this template &gt; Open in a codespace</code> button.</li>
-          <li>This will open a browser-based IDE (essentially vscode) in a new tab.</li>
-        </ol>
-      </section>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
 
-      <section>
-        <h2>Step 2: Launch Setup Script</h2>
-        <ol>
-          <li>From the integrated CLI, launch the setup script after having sourced the hidden <code>.env</code> file:
-            <pre>
-              <code>source .env</code>
-              <code>setup</code>
-            </pre>
-          </li>
-          <li>This will install (first time only) all the dependencies we need, basically <code>pygame</code> and a custom version of <code>pygbag</code> modules.</li>
-        </ol>
-      </section>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-      <section>
-        <h2>Step 3: Launch Deploy Script</h2>
-        <ol>
-          <li>Navigate to the snake version you want to run, for instance the standard one, and launch the deploy script:
-            <pre>
-              <code>cd std/</code>
-              <code>deploy</code>
-            </pre>
-          </li>
-          <li>This basically uses the <code>pygbag</code> module passing the GitHub <code>${CODESPACE_NAME}</code> environment variable to deploy the game on that domain name (randomly chosen by GitHub itself), under the default port <code>8000</code>.</li>
-        </ol>
-      </section>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <section>
-        <h2>Step 4: Ready to Start!</h2>
-        <p>Click on the <code>Ready to start!</code> button and that's it!</p>
-        <img src="img/url_codespace.png" alt="Codespace URL">
-      </section>
-    </div>
-  </div>
-<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
-<script>
-  Reveal.initialize({
-    hash: true
-  });
-</script>
-</body>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
 
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			<section>
+				<section>
+					<h1>Snake your way</h1>
+					<h2>into GitHub Codespaces</h2>
+					<p style="color: rgba(255, 255, 255, 0.15); font-size: 20px;">(use the <em>Space</em> key to navigate through all slides)</p>
+				</section>
+				<section>
+					<p>Follow these steps to run this project on the browser.</p>
+				</section>
+			</section>
+
+			<section>
+				<!-- <section> -->
+				<section id="fragments">
+						<p>Go to the following URL: <br> <a href="https://github.com/andreagalle/snake-autoplay">https://github.com/andreagalle/snake-autoplay</a></p>
+				</section>
+
+				<section>
+					<p>Not yet a community member?</p>
+					<p class="fragment"> Signup on <a href="https://github.com/" target="_blank">GitHub</a> and navigate to the repo <a href="https://github.com/andreagalle/snake-autoplay" target="_blank">andreagalle/snake-autoplay</a></p>
+				</section>
+				<section>
+					<p>click on the button: <br> <code>Use this template &gt; Open in a codespace</code></p>
+					<img src="img/open_codespace.png" alt="Open Codespace">
+				</section>
+				<section>
+					<p>This open a browser-based IDE (vscode) in a new tab.</p>
+				</section>
+				<section data-background="img/ide_codespace.png">
+					<div style="position: absolute; width: 50%; right: 0; box-shadow: 0 1px 4px rgba(255, 255, 255, 0.5), 0 5px 25px rgba(255, 255, 255, 0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h3>from the CLI below</h3>
+						<p> source the hidden <code>.env</code> file <br> then launch the <code>setup</code> script </p>
+						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers>
+							source .env
+							setup
+						</code></pre>
+					</div>
+				</section>
+				<section data-background="img/setup_codespace.png">
+					<div style="position: absolute; width: 50%; right: 0; box-shadow: 0 1px 4px rgba(255, 255, 255, 0.5), 0 5px 25px rgba(255, 255, 255, 0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<!-- <h3>from the CLI below</h3> -->
+						<p> this install the necessary dependecies <br> basically pygame and pygbag modules </p>
+					</div>
+				</section>
+				<section data-background="img/update_codespace.png">
+					<div style="position: absolute; width: 50%; right: 0; box-shadow: 0 1px 4px rgba(255, 255, 255, 0.5), 0 5px 25px rgba(255, 255, 255, 0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<!-- <h3>from the CLI below</h3> -->
+						<p> or simply lists them all <br> if the <code>setup</code> script was already run</p>
+					</div>
+				</section>
+				<section data-background="img/deploy_codespace.png">
+					<div style="position: absolute; width: 50%; right: 0; box-shadow: 0 1px 4px rgba(255, 255, 255, 0.5), 0 5px 25px rgba(255, 255, 255, 0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<!-- <h3>from the CLI below</h3> -->
+						<p> finally launch the <code>deploy</code> script to run a first test  <br> and click on the <code>Open in Browser</code> pop-up </p>
+						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers>
+							deploy
+						</code></pre>
+					</div>
+				</section>
+				<section>
+					<p> or simply visit the URL where the game was deployed</p>
+					<img src="img/url_codespace.png" alt="Open Codespace">
+					<p class="fragment" data-fragment-index="1">replacing the domain name accordingly, with the one randomly chosen by GitHub, the default port is 8000</p>						 
+					<img class="fragment" data-fragment-index="2" src="img/animated_space_zebra.png" alt="Open Codespace">
+					<p class="fragment" data-fragment-index="2">this is the highlighted string (like above)</p>
+				</section>
+				<section data-background="img/snake_demo.gif">
+					<h2>... the result should look like THIS!</h2>
+				</section>
+				<section>
+					<p> turn off the Codespace not to waste useful resources</p>
+					<img class="fragment" data-fragment-index="1" src="img/bar_codespace.png" alt="Open Codespace">
+					<p class="fragment" data-fragment-index="1">go to the <code>Codespaces</code> tab (GitHub Navigation Bar) <br> search for the running Codespace and stop it</p>						 
+					<img class="fragment fade-in" data-fragment-index="2" src="img/stop_codespace.png" alt="Open Codespace">
+				</section>
+			</section>
+
+			<section>
+				<h3>This was crafted with</h3>
+				<a href="https://revealjs.com">
+					<img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+				</a>
+				<p>
+					<small>A Framework created by <a href="http://hakim.se">Hakim El Hattab</a> and <a href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a> <br> to make stunning HTML presentations</small>
+				</p>
+			</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
 </html>
