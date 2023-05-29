@@ -33,6 +33,7 @@ jobs:
             mv doc/*        build/web/
             mv README.md    build/web/
             cd $GITHUB_WORKSPACE/build/web/
+            sed -i 's/\/doc\/img\//\/img\//g' README.md
             mv index.html demo.html
     - name : "Upload to GitHub pages branch gh-pages"
       uses: JamesIves/github-pages-deploy-action@4.1.7
