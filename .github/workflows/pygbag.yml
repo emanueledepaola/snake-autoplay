@@ -26,11 +26,14 @@ jobs:
     - name: Move quickstart.html & reveal.js into build/web
       run: |
             mkdir -p $GITHUB_WORKSPACE/build/web
-            rm $GITHUB_WORKSPACE/reveal.js/index.html
-            rm $GITHUB_WORKSPACE/reveal.js/demo.html
-            mv $GITHUB_WORKSPACE/reveal.js/* $GITHUB_WORKSPACE/build/web/
-            mv $GITHUB_WORKSPACE/doc/* $GITHUB_WORKSPACE/build/web/
-            mv $GITHUB_WORKSPACE/build/web/index.html $GITHUB_WORKSPACE/build/web/demo.html
+            cd $GITHUB_WORKSPACE/reveal.js
+            rm README.md index.html demo.html
+            cd $GITHUB_WORKSPACE
+            mv reveal.js/*  build/web/
+            mv doc/*        build/web/
+            mv README.md    build/web/
+            cd $GITHUB_WORKSPACE/build/web/
+            mv index.html demo.html
     - name : "Upload to GitHub pages branch gh-pages"
       uses: JamesIves/github-pages-deploy-action@4.1.7
       with:
