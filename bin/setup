@@ -5,6 +5,6 @@ cd ..
 
 pip list -v | grep pygame || pip install pygame
 pip list -v | grep pygbag || { git clone https://github.com/andreagalle/pygbag.git && \
-                               cd pygbag && git checkout gh-codespaces && \
+                               cd pygbag && git checkout gh-codespaces-latest && \
                                pip install -e $PWD ; }
 cd $SNAKE_DIR
