@@ -2,7 +2,9 @@
 # import snake
 # import fruit
 import wall
+
 print(wallbody)
+
 grid = [[0,0,0,0],[0,0,0,0,]]
 
 
@@ -15,7 +17,7 @@ grid = [[0,0,0,0],[0,0,0,0,]]
 
 #    print(fruit.position)
 #    print(snake.position)
-#   print(direction)
+#    print(direction)
 
 # if   direction[1] > 0:
 #        return 'UP'
