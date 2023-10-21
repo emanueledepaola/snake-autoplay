@@ -3,7 +3,7 @@
 # import fruit
 import wall
 
-print(wallbody)
+print(wall_body[1])
 
 grid = [[0,0,0,0],[0,0,0,0,]]
 
