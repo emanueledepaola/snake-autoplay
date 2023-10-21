@@ -2,6 +2,7 @@
 # import snake
 # import fruit
 import wall
+print(wallbody)
 grid = [[0,0,0,0],[0,0,0,0,]]
 
 
